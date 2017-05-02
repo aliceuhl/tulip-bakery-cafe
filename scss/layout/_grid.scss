@@ -1,0 +1,9 @@
+//BREAKPOINTS
+$mobile-break: 320px;
+$landscape-break: 1150px;
+$tablet-break: 1170px;
+$large-desktop-break: 1200px;
+	
+$mobile: new-breakpoint(max-width $mobile-break 4);
+$tablet: new-breakpoint(min-width $mobile-break + 1 max-width $tablet-break 6);
+$desktop-large: new-breakpoint(min-width $large-desktop-break 12);

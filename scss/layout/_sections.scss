@@ -1,0 +1,193 @@
+//Section
+section{
+	@include span-columns(12);
+	@include outer-container(100%);
+	@include row();
+	&:nth-child(odd){
+		background-color: $magenta-brand;
+	}
+	&:nth-child(even){
+		background-color: #fff;
+	}
+
+	@include media($tablet){
+		font-size: $font-size-sm;
+	}
+	//About and Catering
+		.content{
+			@include span-columns(12);
+	
+			height: auto;	
+			@include media($tablet){
+				@include span-columns(6);
+				width: 100%;
+				img{
+					display: none;
+				}
+			}
+			
+			.content--text{
+				@include span-columns(6 of 12);	
+				text-align: left;
+				color: #000;
+				height: inherit;
+				position: relative;
+				
+				@include media($tablet){
+					text-align: center;
+					font-size: $font-size-sm;
+					width: 100%;
+					margin: 0;
+					padding: 2em 4em;
+					h1{
+						font-size: 22px;
+					}
+				}
+				
+				h1{
+					 -webkit-color: $magenta-brand;
+					color: $magenta-brand;
+					text-transform: uppercase;
+					margin-top: 0;
+				}
+				
+				.content__about{
+					padding: 3em;
+					margin-right: 5em;
+					@include media($tablet){
+						margin: 0;
+					}
+				}
+				
+				.content__catering{
+					padding: 2em;
+					margin-left: 15em;
+					
+					@include media($tablet){
+						margin: 0;
+						width: 100%;
+					}
+				}
+			}
+			
+			.content--image{
+				@include span-columns(6 of 12);
+				
+				img{
+					height: inherit;
+					width: 100%;
+					overflow-y: hidden;
+				}
+			}
+		} // /.content
+
+	
+	
+	//Menu 
+	.menu--container{
+		@include span-columns(12);
+		width: 100%;
+		display: block;
+		color: #fff;
+		background-color: $magenta-brand;
+		position: relative;
+		padding: 3em 0;
+	
+		.menu{
+			@include span-columns(8 of 12);
+			@include shift(2);
+			height: auto;
+			display: block;
+			color: #fff;
+			background-color: $magenta-brand;
+
+			.menu-header{
+				width: 100%;
+				text-align: center;
+				margin: 2em 0 0 0;
+				cursor: pointer;
+				font-size: $font-size;
+				
+				.menu-order-info *{
+					margin: 1em;
+				}
+				
+				.menu-options{
+					font-size: 14px;
+					margin-top: 1.5em;
+					text-transform: uppercase;
+					font-weight: bold;
+					li{
+						
+						display: inline-block;
+						margin: .5em .5em;
+						padding: 0.5em;
+						
+						&:focus,&:hover{
+							color: $pseudo-color;
+							font-weight: $bold-weight;
+						}
+						
+						@include media($mobile){
+							display: block;
+						}
+					}
+				}
+			}
+
+			.menu--items{
+				@include span-columns(6 of 12);
+				float: left;
+				padding: 0 1em;
+				@include media($tablet){
+					@include span-columns(6);
+					width: 100%;
+					padding: 0;
+				}
+				
+				
+				ul{
+					margin: 0;
+					padding: 0;
+					
+					@include media($tablet){
+						margin: 0;
+						width: 100%;
+					}
+					
+					li{
+						padding: 0;
+						margin: 50px 0 0 0;
+						
+						h4{
+							margin: 0;
+							padding-top: 0px;
+							padding-bottom: 0;
+						}
+					}
+				}
+
+				span{
+					float: right;
+					padding-right: 15px;
+				}
+			}
+
+		} //end .menu
+		
+} // end .menu--container
+
+	//showHide item-
+	.menu__show-hide{
+		display: none;
+	}	
+	
+} //end section
+
+////find us
+//.map-container{
+//	height:  450px;
+//	background: $magenta-brand;
+//}
+//	
+

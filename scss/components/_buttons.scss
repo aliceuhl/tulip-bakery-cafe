@@ -1,0 +1,16 @@
+button{
+	background: transparent;
+	color: #fff;
+	outline: none;
+	border: 3px solid #fff;
+	width: 150px;
+	height: 50px;
+	border-radius: 3px;
+	&:focus, &:hover {
+		border: 4px solid $magenta-brand;
+		background: #fff;
+		color: $magenta-brand;
+		transition: 0.2s;
+	}
+	
+}

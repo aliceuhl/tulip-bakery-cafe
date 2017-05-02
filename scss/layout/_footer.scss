@@ -1,0 +1,14 @@
+footer{
+	@include span-columns(12);
+	position: relative;
+	bottom: 0;
+	transform: translateX(50);
+	background-color: $magenta-brand;
+	text-align: center;
+	color: #fff;
+	
+	li{
+		display: inline-block;
+		padding: 0.5em 1em;
+	}
+}

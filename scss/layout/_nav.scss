@@ -1,0 +1,159 @@
+@import '../helpers/_mixins.scss';
+
+nav{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin-bottom: 1.5em;
+	display: block;
+	width: 100%;
+	height: 3em;
+	color: #fff;
+	background: transparent;
+	font-size: em(20);
+	font-weight: $header-weight;
+	text-transform: uppercase;
+	text-align: center;
+	z-index: 9999;
+	
+	li{
+		display: inline;
+		margin: 0 2.25em;
+	}
+
+	@include media($tablet){
+		visibility: hidden;
+		display: none;
+	}
+} //end nav
+
+//Sticky Nav
+.nav__sticky{
+	position: fixed;
+	top: 0;
+	border-bottom: 1px solid #fff;
+	transition: 0.1s ease-out;
+	-moz-transition: 0.1s ease-in-out;
+	-webkit-transition: 0.1s ease-out;
+	background: $magenta-brand;
+}
+
+
+//Off-Canvas Naviation for mobile and tablet
+.slide--nav {
+	//position: absolute;
+	right: 0;
+	top: 0;
+	width: 250px;
+	height: 100%;
+	background: $magenta-brand;
+	text-align: center;
+	font-size: $font-size;
+	color: #fff;
+	transition: ease-out;
+	-moz-transition: ease-in-out;
+	-webkit-transition: ease-in-out;
+	z-index: 999;
+	border: 1px solid $magenta-brand-darken;
+	ul{
+		margin: 7em 0 3em 0;
+		padding: 0;
+
+		li{
+			text-transform: uppercase;
+			margin: 0em;
+			padding: 1em;
+			border-top: 1px solid $magenta-brand-darken;
+			
+			&:last-child{
+				border-bottom: 1px solid $magenta-brand-darken;
+			}
+			
+			&:hover{
+				background: $magenta-brand-darken;
+				opacity: 1;
+			}
+		}
+	}
+
+	.slide--nav-contact{
+		font-size: $font-size-sm;
+		padding: 1em 0;
+		
+		ul{
+			margin: 0;
+			padding: 2em 0 4em 0;
+			li{
+				display: inline-block;
+				padding: .5em;
+				border: none;
+			}
+		}
+	}
+} // end .slide--nav	
+
+.slide--nav__right{
+	right: -250px;
+	position: fixed;
+	top: 0;
+	border-bottom: 1px solid #fff;
+	background: $magenta-brand;
+}
+
+//Navicon
+.navicon {
+	position: fixed;
+	cursor: pointer;
+	display: inline-block;
+	width: $navicon-width;
+	height: $navicon-height;
+	right: 5%;
+	top: 5%;
+	z-index: 99999;
+	background-color: $magenta-brand;
+}
+
+//Navicon Visibility.
+.navicon__is-hidden{
+	visibility: hidden;
+	
+	@include media($tablet){
+		visibility: visible;
+	}
+}
+//Navicon Lines
+.navicon-line {
+	@include line;
+	z-index: 10;
+}
+	
+.navicon-line:before {
+	@include line;
+	top: -5px;
+}
+	
+.navicon-line:after {
+	@include line;
+	top: 10px;
+}
+	
+//Transform Navicon to 'X' (close)
+.x-open {
+	background: transparent;
+	z-index: 10;
+}
+	
+.x-open:before {
+	@include line-transform;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+	
+.x-open:after {
+	@include line-transform;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+
+	

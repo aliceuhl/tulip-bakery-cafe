@@ -1,0 +1,43 @@
+//Centering Mixin
+@mixin centering($vh: vh-center, $v:v-center, $h:h-center){
+	position: absolute;
+	margin: 0;
+	@if $vh == vh-center {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	@elseif $v == v-center{
+		top: 50%;
+		left: 0;
+		transform: translate(0, -50%);
+	}
+	@elseif $h == h-center{
+		top: 0;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+}
+
+
+@mixin line{
+	  display: inline-block;
+	  height: $navicon-height/15;
+	  width: $navicon-width/2;
+	  border-radius: 0px;
+	  content:' ';
+	  position: absolute;
+	  background-color: #fff;
+	  top: 50%;   left: 50%;
+	  transform: translate(-50%, -50%);
+	  -webkit-transform: translate(-50%, -50%);
+}
+
+@mixin line-transform{
+	top: 0; left: 0; 
+	transition: 0.4s;
+	-webkit-transition: 0.4s;
+	transform-origin: 50%, 50%;
+	-webkit-transform-origin: 50%, 50%;
+}

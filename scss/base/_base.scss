@@ -1,0 +1,28 @@
+html, body{
+	height: 100%;
+	color: #000;
+}
+
+body{
+	font-family: $font-family;
+	background-color: $magenta-brand;
+}
+
+ul{
+	padding-left: 0;
+}
+
+li{
+	list-style: none;
+	padding: .35em;
+}
+
+a{
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+	
+	&:focus, &:hover{
+		color: $pseudo-color;
+	}
+}

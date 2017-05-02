@@ -1,0 +1,10 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+.editorconfig
+.htaccess
+debug.log
+humans.txt
+browserconfig.xml
+crossdomain.xml
+custom.css
+custom.css.map

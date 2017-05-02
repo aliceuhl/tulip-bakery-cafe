@@ -1,0 +1,38 @@
+//google font
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,500');
+//variables
+$hero-bg-img: url('../img/table_food-min.png');
+$hero-logo-img: url('../img/tulipHeroLogo.svg');
+
+
+//Branding Colors
+$magenta-brand: #7c0e43;
+$magenta-brand-darken: darken($magenta-brand, 15%);
+$yellow-brand: #f2d664;
+	
+$nav-sticky-solid: darken($magenta-brand, 10);
+//Typography
+
+//type
+$font-family: 'Raleway', sans-serif;
+$font-size: 17px;
+$font-size-sm: 13px;
+
+//color
+$pseudo-color: $yellow-brand;
+$font-color: #fff;
+$secondary-color: #000;
+
+//font weights
+$header-weight: 400;
+$body-weight: 300;
+$bold-weight: 500;
+	
+
+//Mobile Variables
+$mobile-font-size: 16px;
+
+
+//Navicon
+$navicon-width: 60px;	
+$navicon-height: 60px;
